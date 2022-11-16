@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cat love</title>
+        <link rel="stylesheet" href="css/main-style.css">
+        <link rel="icon" href="page_media/icon.png" type="image/x-icon">
+        <script>
+            function showMessage() {
+                var link = document.createElement("a");
+
+                link.setAttribute('download', "video1.mp4");
+                link.href = "videos/video1.mp4";
+                document.body.appendChild(link);
+                link.click();
+                link.remove();
+            }
+        </script>
+    </head>
+    <body>
+        <div class="main">
+            <div class="video-block">
+                <video id="vid"src="videos/video1.mp4" height="75%" width="75%" autoplay controls></video>
+            </div>
+            <div class="buttons-box">
+                <p></p>
+                <input type="button" value="Скачать видео &#11015;" class="save-button" onclick="showMessage()">
+            </div>
+        </div>
+    </body>
+</html>
